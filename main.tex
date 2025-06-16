@@ -1,0 +1,129 @@
+% !TEX program = xelatex
+% !TEX root = main.tex
+\documentclass[12pt, a4paper]{article}
+
+% --- PACOTES ---
+% Essenciais e de Idioma
+\usepackage[brazilian]{babel}
+\usepackage{fontspec}
+
+% Layout e Geometria
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{authblk}
+
+% Matemática e Física
+\usepackage{amsmath,amssymb,amsfonts,mathtools,amsthm}
+\usepackage{physics}               % Comandos como \dd, \grad, \vb, etc.
+\usepackage{tensor}                % Para tensores com índices
+\usepackage{bm}                    % Símbolos matemáticos em negrito
+\usepackage{cancel}                % Para cortar expressões matemáticas
+
+% Referências e Links
+\usepackage{hyperref}
+\usepackage{cleveref}              % Referências inteligentes (\cref{...})
+\usepackage{bookmark}              % Melhora os bookmarks do PDF
+
+% Bibliografia e Citações
+\usepackage{csquotes}              % Necessário para alguns estilos do biblatex
+\usepackage[backend=biber, style=numeric-comp, sorting=none]{biblatex}
+
+% Visual
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}              % Controle avançado de listas
+\usepackage{footnote}
+\usepackage{manyfoot}              % Múltiplos tipos de notas de rodapé
+\usepackage{tocloft}               % Para customizar o sumário
+\usepackage{lipsum}                % Apenas para texto de exemplo
+
+
+% --- CONFIGURAÇÃO DA BIBLIOGRAFIA ---
+\addbibresource{referencias.bib}
+
+% --- CONFIGURAÇÕES VISUAIS ---
+% Parágrafos (sem indentação, com espaçamento)
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+
+% Fonte Principal
+\setmainfont{Latin Modern Roman} % Fonte padrão moderna, segura e completa
+
+% Cabeçalho e Rodapé (Fancyhdr)
+\pagestyle{fancy}
+\fancyhf{} % Limpa todos os campos do cabeçalho e rodapé
+\fancyhead[L]{\nouppercase{\leftmark}} % Esquerda: Seção atual (sem caixa alta)
+\fancyhead[R]{\thepage}                 % Direita: Número da página
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+
+
+% Formato dos Títulos (Titlesec)
+\titleformat{\section}{\large\bfseries}{\thesection.}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{1em}{}
+\titleformat{name=\section, numberless}
+  {\large\bfseries\centering}
+  {}
+  {0pt}
+  {}
+
+% Sumário Pontilhado (Tocloft)
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% Notas de Rodapé (Manyfoot)
+\DeclareNewFootnote{B}[fnsymbol]
+
+% Configurações de Links (Hyperref)
+\hypersetup{
+    colorlinks=false,
+    linkcolor=blue,
+    citecolor=red,
+    urlcolor=magenta,
+    pdftitle={Título do Trabalho Final},
+    pdfauthor={Primeiro Autor; Segundo Autor}, % Autores no metadata do PDF
+}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         DOCUMENTO
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% --- PÁGINA 1: TÍTULO, AUTOR E SUMÁRIO ---
+\title{Título do Trabalho Final}
+
+% CORREÇÃO APLICADA AQUI:
+\author{João Paulo Monteiro\\ Felipe Khalil}
+
+\date{16 de junho de 2025}
+
+\maketitle
+\tableofcontents
+
+\newpage % Inicia o conteúdo na próxima página
+
+% --- SEÇÕES DO TRABALHO (A partir da Página 2) ---
+
+\section{Introdução}
+\lipsum[1-2]
+A referência à equação de campo de Einstein é \cref{eq:einstein}.
+
+\section{Desenvolvimento Teórico}
+O tensor de Ricci $R_{\mu\nu}$ e o escalar de curvatura $R$ são fundamentais.
+\begin{equation}
+    R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} = 8\pi G \, T_{\mu\nu}
+    \label{eq:einstein}
+\end{equation}
+\lipsum[3]\cite{einstein1916}
+
+\section{Conclusão}
+\lipsum[4]
+
+% --- BIBLIOGRAFIA ---
+\newpage
+% A seção de referências não numerada será centralizada pelo titlesec
+\printbibliography[title={Referências}]
+
+\end{document}
