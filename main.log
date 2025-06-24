@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10) (preloaded format=xelatex 2024.6.6)  16 JUN 2025 13:54
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10) (preloaded format=xelatex 2024.6.6)  24 JUN 2025 01:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -926,13 +926,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2]
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+LaTeX Warning: Empty bibliography on input line 132.
 
-[3] (main.aux)
+(main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -942,12 +938,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26867 strings out of 410378
- 510153 string characters out of 5788234
- 1924416 words of memory out of 5000000
- 47907 multiletter control sequences out of 15000+600000
+ 26646 strings out of 410378
+ 505678 string characters out of 5788234
+ 1917416 words of memory out of 5000000
+ 47686 multiletter control sequences out of 15000+600000
  566019 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 79i,11n,93p,735b,4675s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,11n,93p,735b,4058s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (3 pages, 38576 bytes).
+Output written on main.xdv (2 pages, 17136 bytes).

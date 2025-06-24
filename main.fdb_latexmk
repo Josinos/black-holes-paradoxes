@@ -1,17 +1,16 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1750092898.3704 -1
-  "main.bcf" 1750092897 107165 ca73831716f6ea09adbb6a8638358906 "xelatex"
-  "referencias.bib" 1750091037 405 d6d9d9003758aa52e4b3ba247a2b1692 ""
+["biber main"] 1750728995.40525 "main.bcf" "main.bbl" "main" 1750740844.17797 0
+  "main.bcf" 1750740843 107098 4d11496e612b4fe0fababae42942c8ad "xelatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1750092897.96959 "main.xdv" "main.pdf" "main" 1750092898.38143 0
-  "main.xdv" 1750092897 38576 f3721ed8419702ba2d8e82b0677b07a4 "xelatex"
+["xdvipdfmx"] 1750740843.79882 "main.xdv" "main.pdf" "main" 1750740844.18935 0
+  "main.xdv" 1750740843 17136 2c3b5ff7a76c69c3505c606f9a31207f "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1750092895.51704 "d:/LaTeX Files/Trabalho Final TRG/black-holes-paradoxes/main.tex" "main.xdv" "main" 1750092898.37097 0
+["xelatex"] 1750740841.24078 "d:/LaTeX Files/Trabalho Final TRG/black-holes-paradoxes/main.tex" "main.xdv" "main" 1750740844.17842 0
   "C:/Users/User/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1717711817 37448366 be26de8b12ea5ca6dfe7d16b9331eef1 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136783054 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1233951848 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -148,12 +147,12 @@
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty" 1686255640 10214 75bcd28386d4b4b9f28b2aff3cea7b24 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "d:/LaTeX Files/Trabalho Final TRG/black-holes-paradoxes/main.tex" 1750092892 3917 84f293738c93da4c528fe862d612149d ""
-  "main.aux" 1750092897 1338 abe16dad8aedb4e8d1f2c8d8d32d6f4c "xelatex"
-  "main.bbl" 1750091373 1639 e750d6cb7550cb5dbb817c4b4eebb96f "biber main"
-  "main.run.xml" 1750092897 2384 b653ea7a7bde2b624592c549512773b4 "xelatex"
-  "main.tex" 1750092892 3917 84f293738c93da4c528fe862d612149d ""
-  "main.toc" 1750092897 246 d89519fde2a2d338ad02ce583536b91c "xelatex"
+  "d:/LaTeX Files/Trabalho Final TRG/black-holes-paradoxes/main.tex" 1750740840 4775 856ecde9746a2d34dacf4d18a0241ec1 ""
+  "main.aux" 1750740843 841 a484c2fb9af10beca27dc129b58a0ec4 "xelatex"
+  "main.bbl" 1750729008 486 ee04f40f768daeed26442158e95aba61 "biber main"
+  "main.run.xml" 1750740843 2384 b653ea7a7bde2b624592c549512773b4 "xelatex"
+  "main.tex" 1750740840 4775 856ecde9746a2d34dacf4d18a0241ec1 ""
+  "main.toc" 1750740843 100 daf24572cccc8be6b3268f45a800af95 "xelatex"
   (generated)
   "main.aux"
   "main.bcf"
