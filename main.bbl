@@ -66,15 +66,15 @@
       \strng{authorbibnamehash}{73b042b9ba90ce90393abfc7ae77a66b}
       \strng{authornamehash}{73b042b9ba90ce90393abfc7ae77a66b}
       \strng{authorfullhash}{73b042b9ba90ce90393abfc7ae77a66b}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Spacetime and Geometry: An Introduction to General Relativity}
       \field{year}{2019}
       \true{nocite}
     \endentry
-    \entry{Nelson}{misc}{}
+    \entry{nelson}{misc}{}
       \name{author}{1}{}{%
         {{hash=d062fb36026c47e04d72840bddf4c12a}{%
            family={Yokomizo},
@@ -88,37 +88,40 @@
       \strng{authorbibnamehash}{d062fb36026c47e04d72840bddf4c12a}
       \strng{authornamehash}{d062fb36026c47e04d72840bddf4c12a}
       \strng{authorfullhash}{d062fb36026c47e04d72840bddf4c12a}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Notas de Aula}
-      \true{nocite}
-    \endentry
-    \entry{schutz1985}{book}{}
-      \name{author}{1}{}{%
-        {{hash=69322df311ba11556d04c3c893524d58}{%
-           family={Schutz},
-           familyi={S\bibinitperiod},
-           given={Bernard\bibnamedelima F.},
-           giveni={B\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Cambridge University Press}%
-      }
-      \strng{namehash}{69322df311ba11556d04c3c893524d58}
-      \strng{fullhash}{69322df311ba11556d04c3c893524d58}
-      \strng{bibnamehash}{69322df311ba11556d04c3c893524d58}
-      \strng{authorbibnamehash}{69322df311ba11556d04c3c893524d58}
-      \strng{authornamehash}{69322df311ba11556d04c3c893524d58}
-      \strng{authorfullhash}{69322df311ba11556d04c3c893524d58}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{A first course in general relativity}
-      \field{year}{1985}
+      \field{title}{Notas de Aula TRG}
       \true{nocite}
+    \endentry
+    \entry{tong}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e1841c0c41b5a5ffe8310253191fe07f}{%
+           family={Tong},
+           familyi={T\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{e1841c0c41b5a5ffe8310253191fe07f}
+      \strng{fullhash}{e1841c0c41b5a5ffe8310253191fe07f}
+      \strng{bibnamehash}{e1841c0c41b5a5ffe8310253191fe07f}
+      \strng{authorbibnamehash}{e1841c0c41b5a5ffe8310253191fe07f}
+      \strng{authornamehash}{e1841c0c41b5a5ffe8310253191fe07f}
+      \strng{authorfullhash}{e1841c0c41b5a5ffe8310253191fe07f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lectures on General Relativity}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.damtp.cam.ac.uk/user/tong/gr.html
+      \endverb
+      \verb{url}
+      \verb https://www.damtp.cam.ac.uk/user/tong/gr.html
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
