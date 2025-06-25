@@ -16,5 +16,111 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{schuller2015}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=2e305c4daabbc4ed4ecaaef1d9489737}{%
+           family={Schuller},
+           familyi={S\bibinitperiod},
+           given={Dr.\bibnamedelimi F.\bibnamedelimi P.},
+           giveni={D\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=fa69ce76b87466ff49b1adf9c3e96735}{%
+           family={Dadhley},
+           familyi={D\bibinitperiod},
+           given={Richie},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{2e305c4daabbc4ed4ecaaef1d9489737}
+      \strng{fullhash}{2e305c4daabbc4ed4ecaaef1d9489737}
+      \strng{bibnamehash}{2e305c4daabbc4ed4ecaaef1d9489737}
+      \strng{authorbibnamehash}{2e305c4daabbc4ed4ecaaef1d9489737}
+      \strng{authornamehash}{2e305c4daabbc4ed4ecaaef1d9489737}
+      \strng{authorfullhash}{2e305c4daabbc4ed4ecaaef1d9489737}
+      \strng{editorbibnamehash}{fa69ce76b87466ff49b1adf9c3e96735}
+      \strng{editornamehash}{fa69ce76b87466ff49b1adf9c3e96735}
+      \strng{editorfullhash}{fa69ce76b87466ff49b1adf9c3e96735}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{booktitle}{The WE-Heraeus International Winter School on Gravity and Light}
+      \field{year}{2015}
+    \endentry
+    \entry{carroll}{book}{}
+      \name{author}{1}{}{%
+        {{hash=73b042b9ba90ce90393abfc7ae77a66b}{%
+           family={Carroll},
+           familyi={C\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{73b042b9ba90ce90393abfc7ae77a66b}
+      \strng{fullhash}{73b042b9ba90ce90393abfc7ae77a66b}
+      \strng{bibnamehash}{73b042b9ba90ce90393abfc7ae77a66b}
+      \strng{authorbibnamehash}{73b042b9ba90ce90393abfc7ae77a66b}
+      \strng{authornamehash}{73b042b9ba90ce90393abfc7ae77a66b}
+      \strng{authorfullhash}{73b042b9ba90ce90393abfc7ae77a66b}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Spacetime and Geometry: An Introduction to General Relativity}
+      \field{year}{2019}
+      \true{nocite}
+    \endentry
+    \entry{Nelson}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d062fb36026c47e04d72840bddf4c12a}{%
+           family={Yokomizo},
+           familyi={Y\bibinitperiod},
+           given={Nelson},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d062fb36026c47e04d72840bddf4c12a}
+      \strng{fullhash}{d062fb36026c47e04d72840bddf4c12a}
+      \strng{bibnamehash}{d062fb36026c47e04d72840bddf4c12a}
+      \strng{authorbibnamehash}{d062fb36026c47e04d72840bddf4c12a}
+      \strng{authornamehash}{d062fb36026c47e04d72840bddf4c12a}
+      \strng{authorfullhash}{d062fb36026c47e04d72840bddf4c12a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Notas de Aula}
+      \true{nocite}
+    \endentry
+    \entry{schutz1985}{book}{}
+      \name{author}{1}{}{%
+        {{hash=69322df311ba11556d04c3c893524d58}{%
+           family={Schutz},
+           familyi={S\bibinitperiod},
+           given={Bernard\bibnamedelima F.},
+           giveni={B\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{69322df311ba11556d04c3c893524d58}
+      \strng{fullhash}{69322df311ba11556d04c3c893524d58}
+      \strng{bibnamehash}{69322df311ba11556d04c3c893524d58}
+      \strng{authorbibnamehash}{69322df311ba11556d04c3c893524d58}
+      \strng{authornamehash}{69322df311ba11556d04c3c893524d58}
+      \strng{authorfullhash}{69322df311ba11556d04c3c893524d58}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A first course in general relativity}
+      \field{year}{1985}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

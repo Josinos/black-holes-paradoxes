@@ -30,6 +30,7 @@
 \usepackage{csquotes}              % Necessário para alguns estilos do biblatex
 \usepackage[backend=biber, style=numeric-comp, sorting=none]{biblatex}
 
+
 % Visual
 \usepackage{graphicx}
 \usepackage{xcolor}
@@ -38,7 +39,21 @@
 \usepackage{manyfoot}              % Múltiplos tipos de notas de rodapé
 \usepackage{tocloft}               % Para customizar o sumário
 \usepackage{lipsum}                % Apenas para texto de exemplo
+\usepackage{comment}               % Serve pra comentar blocos inteiros
 
+
+% --- AMBIENTES ---
+\newtheoremstyle{meuremarkstyle} % <name>
+  {\topsep}                   % <space above>
+  {\topsep}                   % <space below>
+  {\normalfont}               % <body font> - texto normal para o conteúdo
+  {}                          % <indent amount>
+  {\itshape}                 % <head font> - italico para o título
+  {:}                         % <head punctuation> - AQUI ESTÁ O SEGREDO: dois pontos!
+  {.5em}                      % <space after head>
+  {\underline{\thmname{#1}}}                          % <head spec> - deixar vazio para o padrão
+\theoremstyle{meuremarkstyle}
+\newtheorem*{notação}{Notação}
 
 % --- CONFIGURAÇÃO DA BIBLIOGRAFIA ---
 \addbibresource{referencias.bib}
@@ -62,7 +77,7 @@
 
 % Formato dos Títulos (Titlesec)
 \titleformat{\section}{\large\bfseries}{\thesection.}{1em}{}
-\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
 \titleformat{name=\section, numberless}
   {\large\bfseries\centering}
   {}
@@ -90,11 +105,11 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-
+\pagenumbering{gobble}
 % --- PÁGINA 1: TÍTULO, AUTOR E SUMÁRIO ---
 \title{Diagramas de Carter-Penrose no Estudo de Buracos Negros}
 
-% CORREÇÃO APLICADA AQUI:
+
 \author{João Paulo Monteiro\\ Felipe Khalil}
 
 \date{\today}
@@ -104,23 +119,120 @@
 
 \newpage % Inicia o conteúdo na próxima página
 
-% --- SEÇÕES DO TRABALHO (A partir da Página 2) ---
-
+% --- SEÇÕES DO TRABALHO (A partir da Página 1) ---
+\pagenumbering{arabic}
+\setcounter{page}{1}
 \section{Introdução}
 
-Uma das primeiras dificuldades que surgem em relatividade geral (RG) no estudo de buracos negros (BH's)
-é a falta de uma representação visual e geométrica do que está acontencendo no entorno
-desses objetos. Tais representações não são de fato \textit{necessárias} para o 
-entendimento da física de buracos negros; contudo, são de grande utilidade para explicitar
-(e até revelar) algumas propriedades fundamentais do espaço-tempo nessas circunstâncias.
+Uma das primeiras dificuldades que surgem em relatividade geral no estudo de buracos negros
+ é a falta de uma representação visual e geométrica do que está acontencendo no entorno
+desses objetos. Tais representações não são, de fato, \textit{necessárias} para o 
+entendimento da física de buracos negros; contudo, veremos que serão de grande utilidade para explicitar
+(e até revelar) algumas propriedades fundamentais do espaço-tempo na presença de corpos massivos.
 
-Mas para quê mais diagramas? Afinal, o diagrama de Minkowisky cumpre bem esse papel para um espaço-tempo plano:
-explicita alguns resultados da relativade especial, e é uma ótima ferramenta
-para solucionar os ditos \enquote{paradoxos} da teoria e entender causalidade. A questão é que até podemos tentar usá-lo para descrever espaços-tempos
-curvos (localmente), porém, de imediato, surgem algumas limitações e dificuldades. A primeira e mais
-notória de todas é que o diagrama de Minkowisky é tão extenso  quanto se queira, isto é, para representar
-porções maiores do espaço-tempo, precisaríamos de porções maiores de papel, ou de uma redução
-significativa na escala de resolução. A segunda é que temos problemas \dots 
+Mas para quê mais diagramas? - alguém pode se perguntar. Afinal, o diagrama de Minkowisky cumpre bem sua função para um espaço-tempo plano, vazio de matéria e homogêneo; a princípio,
+bastaria buscar algum tipo de \enquote{extensão natural} desse diagrama para espaços-tempos curvos, mantendo a estrutura cartesiana.
+É isso que iremos fazer agora, e pelo título do nosso trabalho, já adiantamos que coisas
+não muito agradáveis surgirão dessa primeira alternativa.
+
+\subsection{Diagrama de espaço-tempo nas coordenadas de Schwartzschild}
+Considere a métrica de Schwartzchild, a única solução com simetria esférica da
+equação de Einsten no vácuo, expressa em coordenadas esféricas $(t,r,\theta,\varphi)$:
+\begin{equation*}
+  g = -\qty(1-\frac{2GM}{r})dt\otimes dt + \qty(1-\frac{2GM}{r})^{-1}dr\otimes dr + r^2\qty(d\theta \otimes d\theta + \sin^2\theta d\varphi \otimes d\varphi)
+\end{equation*}
+
+\begin{notação}
+sempre que tivermos dois produtos tensoriais envolvendo coordenadas idênticas, escreveremos de forma mais
+\enquote{relaxada}; e mesmo se não forem idênticas, ainda omitiremos o símbolo de produto tensorial, apenas tomando o cuidado de
+respeitar a ordem dos produtos, como segue:
+\begin{gather*}
+  dx^{\mu} \otimes dx^{\mu} \coloneq (dx^{\mu})^2,\\
+  dx^{\mu} \otimes dx^{\nu}  \coloneq dx^{\mu}dx^{\nu}
+\end{gather*} 
+Além disso, por vezes denotaremos o termo esférico da métrica de Schwartzchild por
+\begin{equation*}
+  d\Omega^2 = d\theta ^2 + \sin^2\theta d\varphi ^2
+\end{equation*}
+(já empregando a primeira convenção de notação), onde $d\Omega^2$ é identificado como a 
+métrica da 2-esfera unitária (ou o elemento de arco sobre a 2-esfera esfera unitária, se preferir).
+\begin{flushright}
+ $\qedsymbol$
+\end{flushright}
+\end{notação}
+
+Para representar o espaço-tempo nessa situação, e avaliar as relações de causalidade
+determinadas pelos cones de luz, vamos avaliar as geodésicas nulas descritas por
+essas coordenadas, sob essa métrica\footnote{Como, ao longo do curso, optamos por trabalhar
+com o cálculo da geodésica a partir dos símbolos de conexão, seguiremos por esse caminho, mas
+vale ressaltar que o mesmo cálculo também é possível (e às vezes até mais conveniente) a 
+partir de princípios variacionais com uma Lagrangiana apropriada em mãos, conforme feito em
+\cite{schuller2015}.}. 
+
+Por simplicidade, consideraremos geodésicas radiais, isto é, com
+ângulos $\theta$ e $\varphi$ fixos, portanto, $d\theta = d\varphi = 0$. Isso
+já simplifica muito a métrica, pois todo o termo $d\Omega^2$ vai a zero.
+
+Além disso, para geodésicas nulas, sabemos que a aplicação da métrica em qualquer vetor tangente dessa 
+geodésica resulta em zero, isto é, $g(u_\gamma,u_\gamma) = 0$, o que nos leva a inferir que,
+nessa curva, a métrica é nula em todo ponto. 
+
+Para uma conexão compatível com a métrica, os símbolos de conexão são dados pelos \textbf{Símbolos de
+Christoffel}, que podem ser calculados pela fórmula:
+\begin{equation*}
+  \Gamma^\rho_{\mu\nu} = \frac{1}{2}g^{\rho \sigma}\qty(\partial_\mu g_{\nu\sigma} + \partial_{\nu}g_{\mu\sigma} - \partial_{\sigma}g_{\mu\nu})
+\end{equation*}
+
+Para o cálculo da equação geodésica para a coordenada temporal $t$, precisaremos apenas dos simbolos
+$\Gamma^t_{\mu\nu}$, com $\mu,\nu = t,r,\theta,\varphi$. Por sorte, nessa métrica apenas um destes
+é não-nulo, a saber:
+
+\begin{equation*}
+  \Gamma^t_{rt} = \frac{GM}{r^2}\qty(1-\frac{2GM}{r^2})^{-1}
+\end{equation*}
+
+Usando essa expressão na equação da geodésica para um parametro afim $\lambda$
+\begin{equation*}
+  \dv[2]{x^\mu}{\lambda} + \Gamma^\mu_{\rho \sigma}\dv{x^\sigma}{\lambda}\dv{x^\rho}{\lambda} = 0
+\end{equation*}
+e extraindo dela apenas a equação para a coordenada temporal, fazendo $\mu = t$, e ainda
+com algumas manipulações que omitiremos aqui, obtemos\footnoteB{levando a relação envolvendo $\dot{t}$ e a constante $k$ na equação da métrica e igualando-a a zero (geodésica tipo luz, nula) obtemos a relação destacada para r}:
+\begin{equation}
+  \qty(1-\frac{2GM}{r})\dot{t} = k = cte \footnoteB{Vimos no curso que essa constante $k$ é um múltiplo da energia, mas optamos por manter a letra $k$ para explicitar o fato de ser uma constante} \leadsto \dot{r} = \pm k \Rightarrow \boxed{r = \pm k\lambda} 
+  \label{eq:dilat_temporal}
+\end{equation}
+Isso caracteriza $r$ como um outro parâmetro afim! De forma que podemos reparametrizar a coordenada
+$t(\lambda) \to t(r) = t(\pm k\lambda)$. O restante dos procedimentos pode ser encontrado em 
+\cite{schuller2015} bem desenvolvidos, resultando em duas famílias de geodésicas para a coordenada t:
+\begin{align}
+  t_{in}(r) &= r_0 - r - 2GM\log\qty(\frac{r - 2GM}{r_0-2GM}) \label{eq:t_in}\\
+  t_{out} &= r - r_0 + 2GM\log\qty(\frac{r - 2GM}{r_0-2GM}) \label{eq:t_out} 
+\end{align}
+Ao plotar as várias curvas provenientes das equações (\ref{eq:t_in}) e (\ref{eq:t_out}) num diagrama
+$(t,r)$, escolhendo diversos valores para a constante $r_0$ (que marca a posição de um observador fixo), obtemos o diagrama da figura \ref{fig:diag_schwc}.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\textwidth]{Figuras/diag_schwc.png}
+  \caption{diagrama de espaço-tempo em coordenadas de Schwartzchild - \textit{outgoing} e
+          \textit{ingoing} representam raios de luz se afastando, e se aproximando, respectivamente. \\Fonte: Schuller, Dadhley (2015, p. 130)\cite{schuller2015}}
+  \label{fig:diag_schwc}
+\end{figure}
+
+Note a distorção sofrida pelos cones de luz ao se aproximarem e se afastarem do horizonte de eventos. Note também que
+esse diagrama, representado com essas coordenadas, poderia nos levar à conclusão de que as geodésicas tipo luz \textit{ingoing} (indo em direção ao buraco negro)
+nunca atravessariam o horizonte de eventos, o que parece estar longe da verdade. Contudo, isso é o que nós observaríamos ao ver um objeto cair num
+buraco negro de Schwartzchild, nunca veríamos esse objeto cruzar o horizonte de eventos - chegaria num ponto em que
+ele aparecia \enquote{parado} em relação a nós, observadores, mas puramente devido a um fenômeno de dilatação
+temporal extrema\footnote{como pode ser visto pelo lado esquerdo da equação (\ref{eq:dilat_temporal}) à medida que se toma $r \to 2GM$}.  
+
+%CONCLUSAO DO PQ ESSE DIAGRAMA É UMA MERDA PRA AVALIAR CAUSALIDADE (DISTORÇÃO NO CONE DE LUZ).
+%CITAR QUE OS "PROBLEMAS" OBTIDOS (COMO: LUZ NÃO CAI NO BURACO NEGRO) PODEM SER RESOLVIDOS COM UMA
+%MELHOR ESCOLHA DE COORDENADAS (EDDINGTON-FIKELSTEIN E KRUSHAL-SZEKERES) E COMENTAR QUAIS DESSES PROBLEMAS SAO RESOLVIDOS (ALGUNS, DEPOIS METE UM "ETC."),
+%MAS MOSTRA QUE AINDA NECESSITAM DE UM PEDAÇO "INFINITO" DE PAPEL PARA REPRESENTAR TODO O ESPAÇO-TEMPO
+\section{Transformações Conformes}
+\section{\enquote{Receita} para Diagramas de Penrose}
+\section{Aplicações Simples do Diagrama de Penrose}
+\section{Conclusão}
 
 
 
@@ -128,7 +240,8 @@ significativa na escala de resolução. A segunda é que temos problemas \dots
 
 % --- BIBLIOGRAFIA ---
 \newpage
-% A seção de referências não numerada será centralizada pelo titlesec
+
+\nocite{*}
 \printbibliography[title={Referências}]
 
 \end{document}
