@@ -49,6 +49,26 @@
       \field{booktitle}{The WE-Heraeus International Winter School on Gravity and Light}
       \field{year}{2015}
     \endentry
+    \entry{nelson}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d062fb36026c47e04d72840bddf4c12a}{%
+           family={Yokomizo},
+           familyi={Y\bibinitperiod},
+           given={Nelson},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d062fb36026c47e04d72840bddf4c12a}
+      \strng{fullhash}{d062fb36026c47e04d72840bddf4c12a}
+      \strng{bibnamehash}{d062fb36026c47e04d72840bddf4c12a}
+      \strng{authorbibnamehash}{d062fb36026c47e04d72840bddf4c12a}
+      \strng{authornamehash}{d062fb36026c47e04d72840bddf4c12a}
+      \strng{authorfullhash}{d062fb36026c47e04d72840bddf4c12a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Notas de Aula TRG}
+    \endentry
     \entry{carroll}{book}{}
       \name{author}{1}{}{%
         {{hash=73b042b9ba90ce90393abfc7ae77a66b}{%
@@ -74,28 +94,7 @@
       \field{year}{2019}
       \true{nocite}
     \endentry
-    \entry{nelson}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=d062fb36026c47e04d72840bddf4c12a}{%
-           family={Yokomizo},
-           familyi={Y\bibinitperiod},
-           given={Nelson},
-           giveni={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{d062fb36026c47e04d72840bddf4c12a}
-      \strng{fullhash}{d062fb36026c47e04d72840bddf4c12a}
-      \strng{bibnamehash}{d062fb36026c47e04d72840bddf4c12a}
-      \strng{authorbibnamehash}{d062fb36026c47e04d72840bddf4c12a}
-      \strng{authornamehash}{d062fb36026c47e04d72840bddf4c12a}
-      \strng{authorfullhash}{d062fb36026c47e04d72840bddf4c12a}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Notas de Aula TRG}
-      \true{nocite}
-    \endentry
-    \entry{tong}{misc}{}
+    \entry{tong}{book}{}
       \name{author}{1}{}{%
         {{hash=e1841c0c41b5a5ffe8310253191fe07f}{%
            family={Tong},

@@ -33,6 +33,7 @@
 
 % Visual
 \usepackage{graphicx}
+\usepackage{gensymb}
 \usepackage{xcolor}
 \usepackage{enumitem}              % Controle avançado de listas
 \usepackage{footnote}
@@ -218,13 +219,13 @@ com algumas manipulações que omitiremos aqui, obtemos\footnoteB{levando a rela
 \end{equation}
 Isso caracteriza $r$ como um outro parâmetro afim! De forma que podemos reparametrizar a coordenada
 $t(\lambda) \to t(r) = t(\pm k\lambda)$. O restante dos procedimentos pode ser encontrado em 
-\cite{schuller2015} e \cite{Nelson} bem desenvolvidos, resultando em duas famílias de geodésicas para a coordenada t:
+\cite{schuller2015} e \cite{nelson} bem desenvolvidos, resultando em duas famílias de geodésicas para a coordenada t:
 \begin{align}
   t_{in}(r) &= r_0 - r - 2GM\log\qty(\frac{r - 2GM}{r_0-2GM}) \label{eq:t_in}\\
   t_{out} &= r - r_0 + 2GM\log\qty(\frac{r - 2GM}{r_0-2GM}) \label{eq:t_out} 
 \end{align}
 Ao plotar as várias curvas provenientes das equações (\ref{eq:t_in}) e (\ref{eq:t_out}) num diagrama
-$(t,r)$, escolhendo diversos valores para a constante $r_0$ (que marca a posição de um observador fixo), obtemos o diagrama da figura \ref{fig:diag_schwc}.
+$(t,r)$, escolhendo diversos valores para a constante $r_0$ (que marca a posição radial na qual a fonte emitiu um pulso luminoso, por exemplo), obtemos o diagrama da figura \ref{fig:diag_schwc}.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.9\textwidth]{Figuras/diag_schwc.png}
@@ -242,23 +243,64 @@ temporal extrema\footnote{como pode ser visto pelo lado esquerdo da equação (\
 
 Além de tudo isso, o diagrama $(t,r)$ nas coordenadas de Schwartzchild também pode nos levar a crer que a singularidade
 $r=0$ é uma posição no espaço a ser alcançada, quando na verdade, veremos que se trata mais de uma \enquote{posição no tempo}\footnote{Tecnicamente, dizemos que a coordenada radial se torna tipo tempo, ou \textit{timelike}, que pode ser visualizada na figura \ref{fig:diag_schwc} pela \enquote{inversão} de direção dos cones de luz.},
-a qual é impossível de ser evitada.
+a qual é impossível de ser evitada para objetos e feixes de luz que já cruzaram o horizonte de eventos.
 
 Em geral, alguns dos problemas encontrados em diagramas $(t,r)$ com coordenadas de Schwartzschild são resolvidos puramente por uma
-escolha melhor de coordenadas, podendo ainda manter a forma cartesiana do diagrama. Contudo, propriedades mais fundamentais do espaço-tempo
-na influência de buracos negros serão ainda mais elucidadas com os Diagramas de Carter-Penrose, como pretendemos mostrar nas próximas sessões deste trabalho.
+escolha melhor de coordenadas, podendo ainda manter a forma cartesiana do diagrama. Contudo, só conseguimos uma boa descrição \textit{global} e compacta da estrutura causal por meio dos Diagramas de Carter-Penrose, como pretendemos mostrar nas próximas sessões deste trabalho. Mas para construir esses diagramas, precisamos primeiro introduzir coordenadas que resolvem os problemas encontrados nas de Schwartzchild.
+\section{Coordenadas de Kruskal-Szekeres}
+Uma possível escolha de coordenadas que resolve os principais problemas encontrados com as coordenadas
+de Schwartzchild, é a das coordenadas de Kruskal-Szekeres (K-S). Esse novo conjunto de coordenadas apresenta
+duas propriedades importantes, a saber:
+\begin{enumerate}[label=\arabic*., leftmargin=2.5em]
+  \item Mantém os cones de luz inalterados com uma abertura interna de 90\degree.
+  \item Não apresenta divergência em $r = 2GM$.
+\end{enumerate}
+Para construir as coordenadas de K-S, primeiro precisamos introduzir as coordenadas nulas\footnote{Nulas, pois, segue de suas definições que, curvas com $u=cte$ ou $v=cte$ são geodésicas do tipo luz descritas nas coordenadas tipo tempo e tipo espaço que as constroem.} $u$ e $v$:
+%
+\[
+\left\{\;
+\begin{aligned}
+    u &\coloneq t - r_\star\\
+    v &\coloneq t + r_\star
+  \end{aligned}
+\right.
+\]
+%
+onde $r_\star$ é a \enquote{coordenada tartaruga}\footnoteB{O nome legal se deve ao fato de que $\dv*{r}{r_\star} \to 0$ à medida que se varia $r_\star$
+em $r \to 2GM$, como se estivéssemos chegando cada vez mais devagar no horizonte de eventos a partir de variações nessa nova coordenada.}, construída de modo que a métrica deixe de apresentar a singularidade de coordenada em $r = 2GM$. Sua expressão em termos da coordenada radial de Schwartzschild é:
+\begin{equation*}
+  r_\star = r + 2GM\log\qty|\frac{r}{2GM}-1|.
+\end{equation*}
+Note que essas novas coordenadas (aparentemente) já resolvem nossos problemas: (1) já descrevem raios de luz com inclinação $\pm$1 num diagrama $(t,r_\star)$, e (2) removem a singularidade de coordenadas em $r = 2GM$.
+Contudo, expressando a métrica com essas novas coordenadas, pode-se mostrar que ela ainda é degenerada (ou seja, se anula) em $r = 2GM$.
+Para corrigir isso, aplicamos uma nova transformação nessas coordenadas, obtendo ao final de algumas manipulações e redefinições:
+\begin{align*}
+T(t,r,\theta,\varphi) &\coloneq \qty(\frac{r}{2GM}-1)^{1/2} e^{r/4GM}\sinh(\frac{t}{4GM})\\
+R(t,r,\theta,\varphi) &\coloneq \qty(\frac{r}{2GM}-1)^{1/2} e^{r/4GM}\cosh(\frac{t}{4GM})
+\end{align*}
+De modo que a métrica de Schwartzchild, expressa nessas coordenadas, fica:
+\begin{align*}
+ds^2 = &\underbrace{\frac{32G^3M^3}{r}e^{-r/2GM}}(-dT^2 + dR^2) + r^2d\Omega^2\\
+&\text{Fator Conforme}
+\end{align*}
+essa é, por vezes, chamada de \enquote{métrica de Kruskal}, e descreve globalmente a geometria do espaço-tempo na presença de um buraco negro de Schwartzchild. Por conta desta última propriedade, também é dita como a \enquote{extensão máxima} da solução de Schwartzchild\footnote{Não entraremos em detalhes sobre o que essa \enquote{extensão} significa num tratamento mais rigoroso e preciso; num primeiro momento, basta entender que é uma propriedade das coordenadas escolhidas que permite uma descrição mais completa da variedade espaço-temporal.}. 
+Para geodésicas nulas nessas novas coordenadas, mantendo $\theta$ e $\varphi$ fixos (i.e., $d\Omega = 0$), obtemos uma métrica \enquote{com cara de Minkowisky} multiplicada por um fator conforme.
+
+Poderíamos mostrar aqui um diagrama $(T,R)$ nas coordenadas de Kruskal e discutir todos os resultados impressionantes que saem dessas coordenadas, uma vez que eliminamos os problemas encontrados nas coordenadas de Schwartzschild, e obtivemos expressão não degenerada para a métrica. Porém, como o intuito do trabalho é
+explorar, de fato, os diagramas de Carter-Penrose, deixaremos para discutir esses resultados na \S4. Seguiremos agora para uma outra ferramenta importante para a construção dos diagramas de Carter-Penrose, as \textit{transformações conformes}.
+
 \section{Transformações Conformes}
 
 Um dos pilares dos diagramas de Carter-Penrose, e na verdade, onde reside o \textit{core}
-da ideia principal desses diagramas, é justamente a noção de \textbf{Transformações Conformes}, juntamente com a de \textbf{compactação}, que trataremos mais adiante.
+da ideia principal desses diagramas, são as noções de \textbf{transformações conformes} e de \textbf{compactação}, que trataremos mais adiante.
 
-Até onde estamos interessados aqui para a construção desses diagramas, uma transformação conforme é 
+Até onde estamos interessados aqui, uma transformação conforme é 
 basicamente uma mudança na geometria (portanto, uma mudança da métrica) que mantenha a estrutura causal do espaço-tempo
-inalterada. Partiremos agora para a definição matemática, formal, e mais precisa do queremos dizer com isso.
+inalterada. Partiremos agora para a definição matemática, e mais precisa do queremos dizer com isso.
 
 \begin{definição}
 (Transformação Conforme)\\\\
-Uma \textit{transformação conforme} é uma mapa de um espaço tempo $(\mathcal{M},g)$
+Uma \textit{transformação conforme} é um mapeamento de um espaço-tempo $(\mathcal{M},g)$
 no espaço-tempo $(\mathcal{M},\tilde{g})$, dado por
 \begin{equation*}
   \tilde{g}_{\mu\nu}(x) = \omega^2(x)g_{\mu\nu}(x)
@@ -268,7 +310,7 @@ com $\omega \in C^{\infty}(\mathcal{M})$, e tal que $\omega(x) \neq 0, \forall x
   \qed
 \end{flushright}
 \end{definição}
-Segue da condição $\omega^2(x)>0$, que curvas tipo tempo/luz/espaço sob a métrica $g_{\mu\nu}$ também o serão para a 
+Segue da condição $\omega^2(x)>0$ na definição de $\tilde{g}$, que curvas tipo tempo/luz/espaço sob a métrica $g_{\mu\nu}$ também o serão para a 
 métrica conforme $\tilde{g}_{\mu\nu}$:
 \begin{align*}
    \tilde{g}(u_{\gamma},u_{\gamma}) &< 0 \Longleftrightarrow  g(u_{\gamma},u_{\gamma}) < 0\\
@@ -276,14 +318,46 @@ métrica conforme $\tilde{g}_{\mu\nu}$:
    \tilde{g}(u_{\gamma},u_{\gamma}) &> 0 \Longleftrightarrow  g(u_{\gamma},u_{\gamma}) > 0.
 \end{align*}
 Além disso, a segunda condição acima garante que geodésicas tipo luz sob uma métrica também o serão
-para a outra métrica, o que não vale de modo geral para geodésicas tipo tempo/espaço sob $g$, pois elas não
-são necessariamente mapeadas em \textit{geodésicas} sob $\tilde{g}$.
+para a outra métrica, o que não vale de modo geral para geodésicas tipo tempo/espaço sob $g$, pois elas não necessariamente são mapeadas em \textit{geodésicas} sob $\tilde{g}$.
 
-É com essas 3 últimas expressões que queremos dizer com \enquote{preservam a estrutura causal}.
+É sobre essas 3 últimas expressões que queremos dizer com \enquote{transformações conformes preservam a estrutura causal do espaço-tempo}.
+\section{\enquote{Receita} para Diagramas de Carter-Penrose}
+\input{receita}
+\subsection{Aplicação em Schwartzchild}
+Tomando as coordenadas de K-S para desecrever o espaço-tempo na presença de um buraco negro de Schwartzchild, escolhemos novas coordenadas nulas $U$ e $V$, e as relacionamos com $T$ e $R$ para escreveremos a métrica em termos das novas coordenadas nulas:
+\[
+\left\{\;
+\begin{aligned}
+    U &\coloneq T + R\\
+    V &\coloneq T - R
+  \end{aligned}
+\right. \;\Rightarrow \; \left\{\;
+\begin{aligned}
+    T &= \frac{1}{2}(U+V)\\[0.75em]
+    R &= \frac{1}{2}(U-V)
+  \end{aligned}
+\right. \Rightarrow \; \left\{\;
+\begin{aligned}
+    dT &= \frac{1}{2}(dU+dV)\\[0.75em]
+    dR &= \frac{1}{2}(dU-dV).
+  \end{aligned}
+\right.
+\]
+Após poucas contas, a métrica fica descrita da seguinte forma:
+\[ ds^2 = \frac{16GM}{r}e^{-r/2GM}(dUdV + dVdU).\]
+Uma primeira análise da métrica confirma que geodésicas tipo luz são descritas por curvas $U=cte$ e $V=cte$, que num diagrama cartesiano $(T,R)$ corresponde a retas de inclinação $\pm 1$, como era desejado.
 
-\section{\enquote{Receita} para Diagramas de Penrose}
-\section{Coordenadas de Krushal-Szekeres}
-\section{Aplicações Simples do Diagrama de Penrose}
+Aplicando agora uma compactificação, dada pelo mapeamento
+\[ \tilde{U} = \arctan(U) \;\; \text{e} \;\; \tilde{V} = \arctan(V) \]
+e prestando atenção nos domínios sobre os quais estão definidas as funções de coordenadas, podemos desenhar o diagrama de Carter-Penrose para a solução de Schwartzchild, expresso na figura \ref{fig:penrose_schwc}.b
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{Figuras/penrose_schwc.png}
+    \caption{.}
+    \label{fig:Minkowski_errada}
+\end{figure}
+
 \section{Conclusão}
 
 
@@ -292,7 +366,6 @@ são necessariamente mapeadas em \textit{geodésicas} sob $\tilde{g}$.
 
 % --- BIBLIOGRAFIA ---
 \newpage
-\pagenumbering{gobble}
 \nocite{*}
 \printbibliography[title={Referências}]
 

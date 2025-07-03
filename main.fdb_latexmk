@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1750884396.34387 -1
-  "main.bcf" 1750884395 107494 7d7b2565c5f71808bdcea429ce1fcf81 "xelatex"
-  "referencias.bib" 1750875020 628 bc948f4ddd7661eb1a60ab4d572e1c00 ""
+["biber main"] 1751565932.44911 "main.bcf" "main.bbl" "main" 1751577570.08151 0
+  "main.bcf" 1751577569 107494 d4ed17677fdf29aaeb23869fe85d6303 "xelatex"
+  "referencias.bib" 1751565887 628 f4be7459ef3491029c9929939fcd2f59 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1750884395.81962 "main.xdv" "main.pdf" "main" 1750884396.35567 0
-  "main.xdv" 1750884395 98572 e1b3ea4b5e118d8aec4405ba42ccdf7d "xelatex"
+["xdvipdfmx"] 1751577569.48586 "main.xdv" "main.pdf" "main" 1751577570.09416 0
+  "main.xdv" 1751577569 184188 e185b2114ab53b7d7f95357d57e03a24 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1750884393.00393 "d:/LaTeX Files/Trabalho Final TRG/black-holes-paradoxes/main.tex" "main.xdv" "main" 1750884396.34443 0
+["xelatex"] 1751577566.63597 "d:/LaTeX Files/Trabalho Final TRG/black-holes-paradoxes/main.tex" "main.xdv" "main" 1751577570.08226 0
   "C:/Users/User/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1717711817 37448366 be26de8b12ea5ca6dfe7d16b9331eef1 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136783054 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1233951848 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -114,6 +114,7 @@
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec-xetex.sty" 1642213122 162076 2f6d31c4632f2730c57b9c0fda038e15 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.cfg" 1642213122 549 c4adac819276241fea8eb79c5ab7b99e ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.sty" 1642213122 1656 7e824878bad4df5a3e8bba4e463d9126 ""
+  "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/gensymb/gensymb.sty" 1667300788 4629 bbc3d88bc1fe1146ecbefa95c41cab26 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.cfg" 1578053545 1104 7ac475a4e3466b0b43e138e9356bda83 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.sty" 1578053545 42759 9cf6c5257b1bc7af01a58859749dd37a ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/color.cfg" 1465894292 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
@@ -159,12 +160,14 @@
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "Figuras/diag_schwc.png" 1750821341 53468 dce479ceb0abe478fb66072ee4265d93 ""
-  "d:/LaTeX Files/Trabalho Final TRG/black-holes-paradoxes/main.tex" 1750884392 15015 8fc28259334ac8a850040788fec0c1f6 ""
-  "main.aux" 1750884395 3527 2dddc3e6ead29ee62b45a4e22e009d21 "xelatex"
-  "main.bbl" 1750875024 4971 5b16c5626203c2dbb7d47c43b012b6ad "biber main"
-  "main.run.xml" 1750884395 2384 7036c15721861dd209f9f0274ab2574d "xelatex"
-  "main.tex" 1750884392 15015 8fc28259334ac8a850040788fec0c1f6 ""
-  "main.toc" 1750884395 659 a232f43ad535f9d49ce0c0747f3b6433 "xelatex"
+  "Figuras/penrose_schwc.png" 1751577008 36842 6c28b11d18cb3e0079eef175809c4117 ""
+  "d:/LaTeX Files/Trabalho Final TRG/black-holes-paradoxes/main.tex" 1751577563 20467 398e9f08fe618f71469cd088ecfa99f3 ""
+  "main.aux" 1751577569 3906 164bab33bb1d614f5fb05a9a02d24c6f "xelatex"
+  "main.bbl" 1751565934 4950 a249f7f1e1853a8ac44f042d69efe37b "biber main"
+  "main.run.xml" 1751577569 2384 b653ea7a7bde2b624592c549512773b4 "xelatex"
+  "main.tex" 1751577563 20467 398e9f08fe618f71469cd088ecfa99f3 ""
+  "main.toc" 1751577569 661 ef097f0414da1e7e02c320f3aba0bf56 "xelatex"
+  "receita.tex" 1751565810 5897 3f719469b55ba46b0165196355f475b9 ""
   (generated)
   "main.aux"
   "main.bcf"

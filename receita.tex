@@ -1,0 +1,43 @@
+%%% Gráfico do desmos (Schwarzschild): https://www.desmos.com/calculator/nrxvtlo9nl
+Como já dito anteriormente, visualizações pictóricas não são necessárias para o entendimento de diferentes espaços-tempos,
+afinal, todas as características da geometria daquela métrica podem ser extraídas dela.
+Porém, apesar de não necessários, diagramas no geral são de extrema importância na construção
+de uma intuição sólida sobre certos aspectos de alguma teoria, e nesse caso não é diferente:
+os diagramas de Penrose são tentativas (e êxitos!) de representar espaços-tempos de forma tal
+que a interpretação da estrutura causal seja visualmente aparente.
+
+Surgem então duas perguntas importantes: 
+\begin{itemize}
+    \item [1)]Como representar espaços-tempos ``infinitos'' em folhas de papel finitas?
+    \item [2)]Como permitir uma interpretação fácil da estrutura causal sendo que os cones de luz se ``deformam'' ao fazer uma mudança de coordenadas?
+\end{itemize}
+Vamos entender a intuição por trás das respostas dessas duas perguntas. Se quisermos representar algo infinito em uma folha de papel, teremos inevitavelmente de aplicar alguma transformação que mapeie conjuntos infinitos em conjuntos finitos; mas transformações desse tipo não são nada estranhas para nós pois existem diversas funções que, por exemplo, mapeiam conjuntos reais infinitos em conjuntos reais finitos, tal como as funções $\arctan(x)$, $\tanh(x)$ e a função sigmoide $\sigma(x):=1/(1+e^{-x})$, que, de forma informal, fazem os seguintes mapas:
+\begin{align*}
+    \arctan(\mathbb{R})&=\left(-\frac{\pi}{2}, \frac{\pi}{2}\right)\\
+    \tanh(\mathbb{R})&=\left(-1, 1\right)\\
+    \sigma(\mathbb{R})&=\left(0, 1\right)
+\end{align*}
+
+Esses mapas só são possíveis pois $\mathbb{R}$ e intervalos reais são conjuntos densos. Com isso, vemos, portanto, a necessidade de aplicar uma transformação como esta, chamada intuitivamente de \textbf{compactificação}, ao construir um diagrama de Penrose. Porém, não podemos realizar uma compactificação das coordenadas sem que os cones de luz se deformem e compliquem uma análise da estrutura causal, para exemplificar isso, vamos aplicar ingenuamente uma dessas transformações no espaço plano de Minkowski e ver o resultado final. Comecemos então com o espaço de Minkowski em coordenadas esféricas:
+\[g = -dt^2+dr^2+r^2d\Omega^2\]
+Vamos compactificar apenas as coordenadas $r$ e $t$, transformando-as em $\bar{r}$ e $\bar{t}$ usando a função arco tangente tal que:
+\[\bar{r}=\arctan(r),\quad\bar{t}=\arctan(t),\quad\bar{\Omega}=\Omega\]
+Notemos que agora as coordenadas novas tiveram seus intervalos alterados: $\bar{r}\in(0,\pi/2)$ e $\bar{t}\in(-\pi/2,\pi/2)$. A métrica nessas coordenadas novas $g_{\mu'\!\nu'}$ é dada pela transformação da métrica antiga de acordo com a matriz jacobiana da transformação:
+\[g_{\mu'\!\nu'}=\frac{dx^\mu}{dx^{\mu'}}\frac{dx^\nu}{dx^{\nu'}}g_{\mu\nu}\implies ds^2=-\sec^4(\bar{t})d\bar{t}^2+\sec^4(\bar{r})d\bar{r}^2 + \tan^2(\bar{r})d\bar{\Omega}^2\]
+Vamos agora investigar os cones de luz: analisemos então as geodésicas tipo luz radiais. Geodésicas tipo luz nos dizem que $ds^2=0$, radiais nos indica que $d\bar{\theta}=d\bar{\phi}=0$ (ou seja $d\bar{\Omega}=0$), portanto:
+\begin{equation}\sec^4(\bar{t})d\bar{t}^2=\sec^4(\bar{r})d\bar{r}^2\implies\tan(\bar{t})=\pm\tan(\bar{r})+k
+\label{eq:geodesica_compact_errada}
+\end{equation}
+Onde $k$ é uma constante. Vamos ver então como fica o gráfico $\bar{t}\times\bar{r}$ dessas geodésicas na Figura \ref{fig:Minkowski_errada}:
+
+\begin{comment}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.2\linewidth]{figuras/Minkowski_errada.png}
+    \caption{Diagrama nas coordenadas compactificadas $\bar{t}\times\bar{r}$ das geodésicas tipo tempo radiais do espaço-tempo de Minkowski variando a constante $k$ da Equação (\ref{eq:geodesica_compact_errada}). Em azul temos os casos $+$ e em vermelho temos os casos $-$ da Equação (\ref{eq:geodesica_compact_errada}).}
+    \label{fig:Minkowski_errada}
+\end{figure}
+\end{comment}
+Na Figura \ref{fig:Minkowski_errada}, vemos claramente que os cones de luz se distorcem, o que não explicita a estrutura causal do espaço de Minkowski, que é extremamente simples. Mas o que deu errado aqui? Voltemos na Equação (\ref{eq:geodesica_compact_errada}) para explicar. Para $\bar{t}$ e $\bar{r}$ suficientemente perto de zero, podemos fazer a aproximação $\tan(x)\approx x$, assim, perto da origem, temos que:
+\[\bar{t}=\pm\;\bar{r}+k\quad\text{(perto da origem)}\]
+Que são os cones de luz que estamos acostumados (com abertura de noventa graus e se abrindo na direção de $\bar{t}$ crescente). Porém ao nos distanciarmos da origem, essa aproximação não é mais válida e começamos a observar a não linearidade da tangente, o que deforma os cones de luz para $k\neq 0$. Vemos então que a raiz desse problema não é a compactificação em si, mas sim as coordenadas que compactificamos: para enxergar isso, basta imaginar qual é a transformação de um ponto com $\bar{r}$ pequeno e $\bar{t}$ qualquer, dessa maneira, podemos usar a aproximação $\tan(\bar{r})\approx \bar{r}$ para $\bar{r}$, mas não para $\bar{t}$, ou seja, estamos compactificando as duas coordenadas de jeitos diferentes! Dessa forma, nesse caso, os cones de luz são ``amassados'' mais em uma direção ($\bar{t}$) do que outra ($\bar{r}$), o que, nesse caso, faz com que os cones de luz para $\bar{t}$ perto de $\pi/2$ se abram cada vez mais. A solução desse problema então seria compactificar as duas coordenadas não de forma independente, mas de forma à preservar os formatos dos cones de luz. Para isso, portanto, é necessário escolher coordenadas que apontam na direção dos cones de luz, pois assim não há como alterar seu formato.

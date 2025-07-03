@@ -210,6 +210,8 @@ INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphic
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\xetex.def
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\xetex.def
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\xetex.def
+INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\latex\gensymb\gensymb.sty
+INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\latex\gensymb\gensymb.sty
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
@@ -310,6 +312,14 @@ INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmex
 INPUT .\Figuras\diag_schwc.png
 INPUT .\Figuras\diag_schwc.png
 INPUT .\Figuras\diag_schwc.png
+INPUT .\receita.tex
+INPUT .\receita.tex
+INPUT .\receita.tex
+INPUT .\receita.tex
+INPUT receita.tex
+INPUT .\Figuras\penrose_schwc.png
+INPUT .\Figuras\penrose_schwc.png
+INPUT .\Figuras\penrose_schwc.png
 INPUT main.aux
 INPUT main.run.xml
 OUTPUT main.run.xml
